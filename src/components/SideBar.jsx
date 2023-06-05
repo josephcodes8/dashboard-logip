@@ -1,57 +1,16 @@
 import SideBarLinks from "./SideBarLinks"
 import Button from "./Button"
+import logo from "../assets/icons/logo.svg"
 const SideBar = () => {
   return (
-    <aside className="max-w-[230px] h-[600px] bg-slate-50/30 p-5 pt-7 rounded-xl flex  flex-col justify-between transition-all">
+    <aside className="max-w-[230px] h-[600px] bg-[#f9fbfe] p-2 md:p-5 pt-7 rounded-xl flex  flex-col justify-between transition-all">
       {/* logo */}
       <a
         href="#"
-        className="text-lg font-bold text-slate-700 flex items-center"
+        className="flex justify-center md:justify-start text-slate-700"
       >
-        <svg
-          width="20"
-          height="20"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 28 28"
-          className="mr-0 md:mr-2"
-        >
-          <rect
-            x="0.562241"
-            y="7.16907"
-            width="7.92927"
-            height="1.71758"
-            rx="0.858788"
-            transform="rotate(-45 0.562241 7.16907)"
-            fill="#350861"
-          />
-          <circle cx="2" cy="7" r="2" fill="#350861" />
-          <circle cx="7" cy="2" r="2" fill="#350861" />
-          <rect
-            x="6.56224"
-            y="13.1691"
-            width="7.92927"
-            height="1.71758"
-            rx="0.858788"
-            transform="rotate(-45 6.56224 13.1691)"
-            fill="#350861"
-          />
-          <circle cx="8" cy="13" r="2" fill="#350861" />
-          <circle cx="13" cy="8" r="2" fill="#350861" />
-          <circle cx="7" cy="8" r="2" fill="#350861" />
-          <rect
-            x="1"
-            y="12.6068"
-            width="14.2919"
-            height="1.71758"
-            rx="0.858788"
-            transform="rotate(-45 1 12.6068)"
-            fill="#350861"
-          />
-          <circle cx="2" cy="13" r="2" fill="#350861" />
-          <circle cx="12" cy="3" r="2" fill="#350861" />
-        </svg>
-        <span className="hidden md:flex">logip</span>
+        <img src={logo} alt="logip logo" className="md:mr-1" />
+        <span className="hidden md:inline font-bold ">logip</span>
       </a>
       {/* primary navigation list */}
       <SideBarLinks type="main" />
