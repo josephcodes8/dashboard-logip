@@ -20,7 +20,7 @@ const SideBar = () => {
         <p className="text-xs text-slate-500 mb-4">
           Get 1 month free and unlock all pro features
         </p>
-        <Button {...{ label: "upgrade" }}></Button>
+        <Button {...{ label: "Upgrade" }}></Button>
       </div>
       {/* secondary navigation list */}
       <SideBarLinks type="secondary" />
