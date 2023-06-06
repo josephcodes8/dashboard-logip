@@ -1,6 +1,19 @@
 import Button from "./Button"
+import ConversationSection from "./ConversationSection"
 import Main from "./Main"
 import Navigation from "./Navigation"
-import SideBarLinks from "./SideBarLinks"
+import ProjectSection from "./ProjectSection"
 import SideBar from "./SideBar"
-export { Button, Main, Navigation, SideBarLinks, SideBar }
+import SideBarLinks from "./SideBarLinks"
+import TeamSection from "./TeamSection"
+
+export {
+  Button,
+  ConversationSection,
+  Main,
+  Navigation,
+  ProjectSection,
+  SideBarLinks,
+  SideBar,
+  TeamSection,
+}

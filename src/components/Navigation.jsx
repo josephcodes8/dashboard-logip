@@ -29,7 +29,7 @@ const Navigation = () => {
           <i className="uil uil-search text-slate-600 absolute top-[50%] left-3 -translate-y-[50%]"></i>
           <input
             type="text"
-            className="bg-slate-50 rounded-full text-xs py-2 pr-2 pl-10 outline-none focus:ring-1 focus:ring-indigo-600/50"
+            className="bg-slate-50 rounded-full text-xs py-2 pr-2 pl-10 outline-none focus:ring-1 focus:ring-indigo-600/50 min-w-[250px]"
             placeholder="Search"
           />
         </label>

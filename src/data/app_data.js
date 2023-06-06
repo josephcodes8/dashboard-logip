@@ -17,4 +17,25 @@ const navigation_links = {
   ],
 }
 
-export { navigation_links }
+const team_members = [
+  {
+    id: "billy_parker",
+    img: "https://images.pexels.com/photos/1043473/pexels-photo-1043473.jpeg?auto=compress&cs=tinysrgb&w=600",
+    name: "Billy Parker",
+    position: "Project Manager",
+  },
+  {
+    id: "nancy_salmon",
+    img: "https://images.pexels.com/photos/2381069/pexels-photo-2381069.jpeg?auto=compress&cs=tinysrgb&w=600",
+    name: "Nancy Salmon",
+    position: "Sales Manager",
+  },
+  {
+    id: "stella_maxwell",
+    img: "https://images.pexels.com/photos/4467687/pexels-photo-4467687.jpeg?auto=compress&cs=tinysrgb&w=600",
+    name: "Stella Maxwell ",
+    position: "UI / UX designer",
+  },
+]
+
+export { navigation_links, team_members }
