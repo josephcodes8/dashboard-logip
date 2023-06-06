@@ -4,7 +4,10 @@ function App() {
   return (
     <>
       <SideBar />
-      <Navigation />
+      <div className="flex-1 flex flex-col gap-3 justify-start">
+        <Navigation />
+        <Main />
+      </div>
     </>
   )
 }
