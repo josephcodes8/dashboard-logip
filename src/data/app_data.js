@@ -38,4 +38,71 @@ const team_members = [
   },
 ]
 
-export { navigation_links, team_members }
+const projects_onboarding = [
+  {
+    icon: "uil uil-clock",
+    time: "11:00 - 12:30",
+  },
+  {
+    icon: "uil uil-schedule",
+    time: "Monday, 20 February",
+  },
+]
+
+const attendees = [
+  {
+    img: "https://images.pexels.com/photos/428328/pexels-photo-428328.jpeg?auto=compress&cs=tinysrgb&w=600",
+    left: 0,
+    z: 0,
+  },
+  {
+    img: "https://images.pexels.com/photos/2269872/pexels-photo-2269872.jpeg?auto=compress&cs=tinysrgb&w=600",
+    left: 4,
+    z: 10,
+  },
+  {
+    img: "https://images.pexels.com/photos/2901191/pexels-photo-2901191.jpeg?auto=compress&cs=tinysrgb&w=600",
+    left: 8,
+    z: 20,
+  },
+  {
+    img: "https://images.pexels.com/photos/2531553/pexels-photo-2531553.jpeg?auto=compress&cs=tinysrgb&w=600",
+    left: 12,
+    z: 30,
+  },
+  {
+    img: "https://images.pexels.com/photos/789303/pexels-photo-789303.jpeg?auto=compress&cs=tinysrgb&w=600",
+    left: 16,
+    z: 40,
+  },
+]
+
+const messages = [
+  {
+    id: "text_one",
+    isMine: true,
+    text: "Hi Next week we'll start a new project, I'll tell you all the details later",
+    time: "9:32",
+  },
+  {
+    id: "text_two",
+    isMine: true,
+    text: "Here is the link to tommorow's meeting, check it please",
+    time: "9:33",
+  },
+  {
+    id: "text_three",
+    isMine: true,
+    text: "Project onboarding",
+    capion: "meet.google.com/project",
+    time: "9:33",
+  },
+]
+
+export {
+  navigation_links,
+  projects_onboarding,
+  messages,
+  attendees,
+  team_members,
+}

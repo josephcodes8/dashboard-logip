@@ -1,3 +1,5 @@
+import { messages } from "../data/app_data"
+
 const ConversationSection = () => {
   return (
     <section className="bg-white rounded-lg p-2 col-span-1 row-span-2">
@@ -18,6 +20,19 @@ const ConversationSection = () => {
           <i className="uil uil-video w-8 h-8  flex items-center justify-center rounded-full bg-white "></i>
           <i className="uil uil-ellipsis-v w-8 h-8 flex items-center justify-center rounded-full bg-white "></i>
         </div>
+      </div>
+      <div>
+        <ul className=" p-4 flex flex-col gap-4">
+          {messages.map((message) => (
+            <li className="bg-blue-50 max-w-[50%] text-sm p-3 ml-auto rounded-l-xl rounded-tr-xl flex flex-col">
+              <span>{message.text}</span>
+              <span className="text-xs text-slate-400">{message.capion}</span>
+              <span className="ml-auto text-xs pt-2 text-slate-400">
+                {message.time}
+              </span>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   )
