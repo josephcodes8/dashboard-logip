@@ -10,9 +10,12 @@ const ProjectSection = () => {
       <p className="text-xs text-slate-400">Add description of your meeting</p>
       <ul className="my-4">
         {projects_onboarding.map((project) => {
-          const { icon, time } = project
+          const { id, icon, time } = project
           return (
-            <li className="flex gap-2 items-center bg-slate-50/50 p-3 rounded-xl mb-4">
+            <li
+              key={id}
+              className="flex gap-2 items-center bg-slate-50/50 p-3 rounded-xl mb-4"
+            >
               <i className={icon}></i>
               <span className="text-xs">{time}</span>
               <i className="uil uil-ellipsis-v  ml-auto"></i>
@@ -25,6 +28,7 @@ const ProjectSection = () => {
         {attendees.map((attendee) => {
           return (
             <img
+              key={attendee.id}
               src={attendee.img}
               className={`w-7 h-7 object-cover rounded-full border border-white absolute z-${attendee.z} left-${attendee.left}`}
             />
@@ -34,7 +38,7 @@ const ProjectSection = () => {
           +2
         </p>
         <a href="#" className="ml-auto text-xs">
-          Send Invitation link{" "}
+          <span className="mr-2 font-semibold">Send Invitation link</span>
           <i className="uil uil-location-arrow bg-blue-300/50 text-slate-600 py-1 px-2 rounded-full "></i>
         </a>
       </div>

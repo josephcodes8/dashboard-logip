@@ -21,21 +21,89 @@ const ConversationSection = () => {
           <i className="uil uil-ellipsis-v w-8 h-8 flex items-center justify-center rounded-full bg-white "></i>
         </div>
       </div>
-      <div>
-        <ul className=" p-4 flex flex-col gap-4">
-          {messages.map((message) => (
-            <li className="bg-blue-50 max-w-[50%] text-sm p-3 ml-auto rounded-l-xl rounded-tr-xl flex flex-col">
-              <span>{message.text}</span>
-              <span className="text-xs text-slate-400">{message.capion}</span>
-              <span className="ml-auto text-xs pt-2 text-slate-400">
-                {message.time}
-              </span>
-            </li>
-          ))}
+      <div className="mx-5 my-10 border-t relative">
+        <p className="absolute font-semibold  text-slate-500 -top-3 left-[50%] -translate-x-[50%] px-2 bg-white">
+          Today
+        </p>
+        <ul className="text-slate-500 mt-10 flex flex-col gap-2">
+          {messages.map((message) => {
+            const { id, isMine, isVoice, text, isLink, link, linkIcon, time } =
+              message
+
+            return (
+              <li
+                key={id}
+                className={`flex gap-2 p-4  rounded-t-xl max-w-[75%] lg:max-w-[60%] ${
+                  isMine
+                    ? " bg-blue-50 self-end rounded-bl-xl"
+                    : "bg-gray-50 rounded-br-xl"
+                }`}
+              >
+                {isLink && (
+                  <span className="bg-white w-10 h-10 rounded-full flex items-center justify-center">
+                    <img src={linkIcon} alt="" className="w-10" />
+                  </span>
+                )}
+                {isVoice && (
+                  <i className="uil uil-play bg-blue-50 flex items-center justify-center w-9 rounded-full"></i>
+                )}
+                <div className="flex flex-col flex-1">
+                  <div className="flex items-center">
+                    {isVoice && (
+                      <div className="flex items-center">
+                        {/* FIX: all bars not showing up */}
+                        {random_bars(25).map((bar) => {
+                          return (
+                            <div
+                              key={bar.id}
+                              className={`w-1 h-[${bar.length}px]  bg-slate-500 rounded-full `}
+                            ></div>
+                          )
+                        })}
+                      </div>
+                    )}
+                    <p
+                      className={`${isVoice && "ml-auto"} text-sm ${
+                        isLink && "font-bold"
+                      }`}
+                    >
+                      {text}
+                    </p>
+                  </div>
+                  <span className="text-xs text-slate-400/80">{link}</span>
+                  <span className="text-xs text-slate-400/80 ml-auto">
+                    {time}
+                  </span>
+                </div>
+              </li>
+            )
+          })}
         </ul>
+        <form action="#" className="bg-slate" className="flex">
+          <span className="uil uil-paperclip"></span>
+          <input type="text" placeholder="Write a message" />
+          <div>
+            <span className="uil uil-emoji"></span>
+            <span className="uil uil-microphone"></span>
+          </div>
+        </form>
       </div>
     </section>
   )
+}
+
+const random_bars = (length) => {
+  const bars = []
+  let i = 0
+  while (i < length) {
+    bars.push({
+      id: i,
+      length: Math.round(Math.random() * 40),
+    })
+    i++
+  }
+  console.log(bars)
+  return bars
 }
 
 export default ConversationSection

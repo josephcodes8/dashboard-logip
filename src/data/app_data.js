@@ -1,3 +1,4 @@
+import meets from "../assets/icons/meets.svg"
 const navigation_links = {
   main: [
     { id: 1, icon: "uil uil-estate", name: "home", isActive: true },
@@ -40,10 +41,12 @@ const team_members = [
 
 const projects_onboarding = [
   {
+    id: "p-1",
     icon: "uil uil-clock",
     time: "11:00 - 12:30",
   },
   {
+    id: "p-2",
     icon: "uil uil-schedule",
     time: "Monday, 20 February",
   },
@@ -51,16 +54,19 @@ const projects_onboarding = [
 
 const attendees = [
   {
+    id: "a-1",
     img: "https://images.pexels.com/photos/428328/pexels-photo-428328.jpeg?auto=compress&cs=tinysrgb&w=600",
     left: 0,
     z: 0,
   },
   {
+    id: "a-2",
     img: "https://images.pexels.com/photos/2269872/pexels-photo-2269872.jpeg?auto=compress&cs=tinysrgb&w=600",
     left: 4,
     z: 10,
   },
   {
+    id: "a-3",
     img: "https://images.pexels.com/photos/2901191/pexels-photo-2901191.jpeg?auto=compress&cs=tinysrgb&w=600",
     left: 8,
     z: 20,
@@ -85,6 +91,13 @@ const messages = [
     time: "9:32",
   },
   {
+    id: "text_four",
+    isMine: false,
+    isVoice: true,
+    text: "00:35",
+    time: "9:32",
+  },
+  {
     id: "text_two",
     isMine: true,
     text: "Here is the link to tommorow's meeting, check it please",
@@ -94,7 +107,9 @@ const messages = [
     id: "text_three",
     isMine: true,
     text: "Project onboarding",
-    capion: "meet.google.com/project",
+    isLink: true,
+    link: "meet.google.com/project",
+    linkIcon: meets,
     time: "9:33",
   },
 ]
