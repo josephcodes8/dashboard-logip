@@ -79,7 +79,7 @@ const ConversationSection = () => {
             )
           })}
         </ul>
-        <form action="#" className="bg-slate" className="flex">
+        <form action="#" className="bg-slate flex">
           <span className="uil uil-paperclip"></span>
           <input type="text" placeholder="Write a message" />
           <div>
